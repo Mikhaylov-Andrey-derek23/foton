@@ -1,0 +1,1024 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "BebasNeueBold";
+  src: url("../fonts/BebasNeueBold.otf") format("truetype");
+  font-family: "BebasNeueBook";
+  src: url("../fonts/BebasNeueBook.otf") format("truetype");
+  font-family: "GilroyMedium";
+  src: url("../fonts/GilroyMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto';
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  border-bottom: #FFFFFF 1px solid;
+  z-index: 3;
+}
+
+header nav {
+  max-width: 1170px;
+  margin: 0 auto;
+  top: 0;
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 520px) {
+  header nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+header nav a {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 23.44px;
+}
+
+@media (max-width: 520px) {
+  header nav a {
+    margin-bottom: 20px;
+  }
+}
+
+header nav a.arrow {
+  position: relative;
+}
+
+header nav a.arrow:after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: 80%;
+  right: -14%;
+  width: 59px;
+  height: 9px;
+  background-image: url("../img/nav_arrow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header nav a.nav_menu {
+  padding: 20px 0;
+  width: 40px;
+}
+
+header nav a.nav_menu .nav_menu_line {
+  width: 100%;
+  position: relative;
+}
+
+header nav a.nav_menu .nav_menu_line:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #FFC736;
+}
+
+header nav a.nav_menu .nav_menu_line:before {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  width: 100%;
+  height: 2px;
+  background-color: #FFC736;
+}
+
+main section {
+  width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main section.title {
+  background-image: url("../img/bg_svark.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section.title .darken {
+  width: 100%;
+  background-color: #0000007d;
+}
+
+main section.title .darken .empty {
+  width: 100%;
+  height: 50vh;
+}
+
+main section.title .darken h1 {
+  font-size: 66px;
+  font-family: 'BebasNeueBold';
+  color: #FFB800;
+  line-height: 79.2px;
+  margin: 0;
+}
+
+main section.title .darken .text_and_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+@media (max-width: 520px) {
+  main section.title .darken .text_and_link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+main section.title .darken .text_and_link .text {
+  max-width: 776px;
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 28.13px;
+}
+
+@media (max-width: 520px) {
+  main section.title .darken .text_and_link .text {
+    margin-bottom: 20px;
+  }
+}
+
+main section.title .darken .text_and_link a {
+  display: block;
+  width: 25%;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px 45px;
+  border-top: #FFB800 1px solid;
+  border-bottom: #FFB800 1px solid;
+  border-right: #FFB800 1px solid;
+  position: relative;
+}
+
+main section.title .darken .text_and_link a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 30%;
+  background-color: #FFB800;
+  z-index: 1;
+}
+
+main section.title .darken .text_and_link a:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 30%;
+  background-color: #FFB800;
+  z-index: 1;
+}
+
+main section.title .darken .text_and_link a span:before {
+  content: '';
+  position: absolute;
+  top: 37%;
+  left: 0;
+  width: 23px;
+  height: 15px;
+  background-image: url("../img/arrow_button.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+main section.title .darken .title_footer {
+  margin-top: 133px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 520px) {
+  main section.title .darken .title_footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+main section.title .darken .title_footer a {
+  display: block;
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 16.41px;
+  margin-right: 119px;
+  padding-top: 5px;
+  border-top: #FFB800 1px solid;
+}
+
+main section.title .darken .title_footer p {
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 16.41px;
+  padding-top: 5px;
+  border-top: #FFB800 1px solid;
+}
+
+main section.product {
+  background-image: url("../img/bg_product.png");
+}
+
+main section.product.light {
+  background-image: none;
+}
+
+main section.product .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 140px;
+  margin-bottom: 12px;
+}
+
+main section.product .title div:nth-child(2) {
+  width: 80%;
+}
+
+main section.product .title h2 {
+  display: block;
+  margin: 0%;
+  font-size: 36px;
+  font-family: 'BebasNeueBold';
+  color: #FFFFFF;
+  line-height: 43.2px;
+  text-align: center;
+}
+
+main section.product .title h2.light {
+  color: #000000;
+}
+
+main section.product .product {
+  margin-top: 100px;
+}
+
+main section.product .product .product_body .composite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section.product .product .product_body .composite div:nth-child(1) h3 {
+  font-family: 'BebasNeueBook';
+  font-size: 30px;
+  line-height: 36px;
+  padding-left: 36px;
+  color: #FFC736;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+main section.product .product .product_body .composite div:nth-child(1) h3:before {
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 0;
+  padding: 10px;
+  border: #FFFFFF 1px solid;
+  border-radius: 50%;
+}
+
+main section.product .product .product_body .composite div:nth-child(1) .detailed_information {
+  max-width: 320px;
+  height: 140px;
+  padding: 30px;
+  border-top: #FFFFFF 1px solid;
+  border-left: #FFFFFF 1px solid;
+}
+
+main section.product .product .product_body .composite div:nth-child(1) .detailed_information .title {
+  margin-top: 0px;
+  font-family: 'BebasNeueBook';
+  font-size: 20px;
+  line-height: 30px;
+  color: white;
+}
+
+main section.product .product .product_body .composite div:nth-child(1) .detailed_information .description {
+  font-family: 'GilroyMedium';
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+main section.product .product .product_body .composite div:nth-child(1) a {
+  margin-top: 70px;
+  display: block;
+  padding: 19px 51px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+  border-top: #FFB800 1px solid;
+  border-bottom: #FFB800 1px solid;
+  border-right: #FFB800 1px solid;
+  position: relative;
+}
+
+main section.product .product .product_body .composite div:nth-child(1) a:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 30%;
+  background-color: #FFB800;
+  z-index: 1;
+}
+
+main section.product .product .product_body .composite div:nth-child(1) a:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 30%;
+  background-color: #FFB800;
+  z-index: 1;
+}
+
+main section.product .product .product_body .composite div:nth-child(1) a span:before {
+  content: '';
+  position: absolute;
+  top: 37%;
+  left: 0;
+  width: 23px;
+  height: 15px;
+  background-image: url("../img/arrow_button.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+main section.product .product .product_body .composite div:nth-child(2) .composite {
+  position: relative;
+}
+
+main section.product .product .product_body .composite div:nth-child(2) .product_picture {
+  width: 499px;
+  height: 499px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 100% 0%;
+}
+
+main section.product .product .product_body .composite div:nth-child(2) .info_detailed {
+  position: absolute;
+  background-color: #FFFFFF;
+  text-align: center;
+  font-size: 10px;
+  padding: 29px;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+main section.product .product .product_body .composite div:nth-child(2) .info_detailed:before {
+  content: 'Наведите';
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 9px;
+  top: 28%;
+  left: 7%;
+}
+
+main section.product .product .product_body .composite div:nth-child(2) .info_detailed:after {
+  content: 'курсор';
+  position: absolute;
+  text-transform: uppercase;
+  font-size: 9px;
+  top: 48%;
+  left: 19%;
+}
+
+main section.product .product .product_body .container_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 108px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: 'BebasNeueBook';
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+main section.product .product .product_body .container_btn .left_btn {
+  padding: 21px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+main section.product .product .product_body .container_btn .left_btn:after {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  padding: 3px;
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+  border-top: #FFB800 1px solid;
+  border-left: #FFB800 1px solid;
+}
+
+main section.product .product .product_body .container_btn .left_btn::before {
+  content: '';
+  position: absolute;
+  top: 3%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #FFB800;
+}
+
+main section.product .product .product_body .container_btn .right_btn {
+  padding: 21px 0;
+  cursor: pointer;
+  position: relative;
+}
+
+main section.product .product .product_body .container_btn .right_btn:after {
+  content: '';
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  padding: 3px;
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+  border-top: #FFB800 1px solid;
+  border-left: #FFB800 1px solid;
+}
+
+main section.product .product .product_body .container_btn .right_btn::before {
+  content: '';
+  position: absolute;
+  top: 3%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #FFB800;
+}
+
+main section.product .product.light .product_body .composite div:nth-child(1) {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+main section.product .product.light .product_body .composite div:nth-child(1) h3:before {
+  content: '';
+  border: #000000 1px solid;
+}
+
+main section.product .product.light .product_body .composite div:nth-child(1) .detailed_information {
+  border-top: #000000 1px solid;
+  border-left: #000000 1px solid;
+}
+
+main section.product .product.light .product_body .composite div:nth-child(1) .detailed_information .title {
+  color: #000000;
+}
+
+main section.product .product.light .product_body .composite div:nth-child(1) .detailed_information .description {
+  color: #000000;
+}
+
+main section.product .product.light .product_body .composite div:nth-child(1) a {
+  color: #000000;
+}
+
+main section.product .product.light .product_body .container_btn {
+  color: #000000;
+}
+
+main section.advantages {
+  background-image: url("../img/bg_advantages.png");
+  color: wheat;
+}
+
+main section.advantages .page_number {
+  margin-top: 169px;
+}
+
+main section.advantages .title {
+  width: 100%;
+  margin-top: 86px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section.advantages .title div:nth-child(1) {
+  width: 60%;
+}
+
+main section.advantages .title div:nth-child(1) h2 {
+  margin: 0;
+  font-family: 'BebasNeueBook';
+  font-size: 36px;
+  line-height: 43.2px;
+  color: #FFB800;
+  text-align: center;
+  font-weight: 400;
+}
+
+main section.advantages .title div:nth-child(1) h3 {
+  margin-top: 20px;
+  font-family: 'GilroyMedium';
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+main section.advantages .title div:nth-child(2) {
+  width: 35%;
+}
+
+main section.advantages .light_block {
+  padding: 22px 33px;
+  border-bottom: #FFFFFF 1px solid;
+  border-left: #FFFFFF 1px solid;
+}
+
+main section.advantages .light_block .title_block {
+  font-family: 'BebasNeueBook';
+  font-size: 20px;
+  line-height: 26.8px;
+  color: #FFFFFF;
+}
+
+main section.advantages .light_block .block {
+  font-family: 'GilroyMedium';
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+main section.advantages .orange_block {
+  padding: 22px 33px;
+  border-top: #FFB800 1px solid;
+  border-right: #FFB800 1px solid;
+}
+
+main section.advantages .orange_block.differently {
+  border-right: #FFB800 0 solid;
+  border-left: #FFB800 1px solid;
+}
+
+main section.advantages .orange_block .title_block {
+  font-family: 'BebasNeueBook';
+  font-size: 20px;
+  line-height: 26.8px;
+  color: #FFFFFF;
+}
+
+main section.advantages .orange_block .block {
+  font-family: 'GilroyMedium';
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+main section.advantages .blocks_advantages {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section.advantages .blocks_advantages div {
+  width: 25%;
+  max-height: 150px;
+}
+
+main section.advantages .blocks_advantages div:nth-child(2) {
+  margin-top: 60px;
+}
+
+main section.advantages .blocks_advantages div:nth-child(3) {
+  margin-top: 40px;
+}
+
+main section.opportunities .title {
+  margin-top: 169px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section.opportunities .title .page_number {
+  margin-top: 30px;
+}
+
+main section.opportunities .title div:nth-child(2) {
+  width: 80%;
+}
+
+main section.opportunities .title div:nth-child(2) h2 {
+  font-family: 'BebasNeueBook';
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main section.opportunities .title div:nth-child(2) p {
+  font-family: 'GilroyMedium';
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-align: center;
+}
+
+main section.opportunities .slider {
+  margin-top: 62px;
+  width: 100%;
+}
+
+main section.opportunities .slider .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section.opportunities .slider .header p {
+  margin: 0;
+}
+
+main section.opportunities .slider .header .text {
+  width: 42%;
+  padding-left: 130px;
+  position: relative;
+}
+
+main section.opportunities .slider .header .text .title {
+  font-family: 'BebasNeueBook';
+  font-size: 22px;
+  line-height: 26.5px;
+  color: #000000;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+main section.opportunities .slider .header .text .description {
+  margin-top: 10px;
+  font-family: 'GilroyMedium';
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+}
+
+main section.opportunities .slider .header .text:before {
+  content: '';
+  position: absolute;
+  padding: 10px;
+  border-radius: 50%;
+  border: #000000 1px solid;
+  top: 0;
+  left: 0;
+}
+
+main section.opportunities .slider .header .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'BebasNeueBook';
+  font-size: 60px;
+  line-height: 72px;
+  font-weight: 400;
+  text-transform: uppercase;
+  max-height: 70px;
+}
+
+main section.opportunities .slider .header .count .left {
+  padding-left: 10px;
+  color: #FFB800;
+  cursor: pointer;
+  position: relative;
+}
+
+main section.opportunities .slider .header .count .left:after {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  padding: 3px;
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
+  border-top: #000000 2px solid;
+  border-left: #000000 2px solid;
+}
+
+main section.opportunities .slider .header .count .left::before {
+  content: '';
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+}
+
+main section.opportunities .slider .header .count .separator {
+  color: #838383;
+  font-weight: bold;
+}
+
+main section.opportunities .slider .header .count .right {
+  padding-left: 10px;
+  color: #838383;
+  cursor: pointer;
+  position: relative;
+}
+
+main section.opportunities .slider .header .count .right:after {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  padding: 3px;
+  -webkit-transform: rotate(130deg);
+          transform: rotate(130deg);
+  border-top: #000000 2px solid;
+  border-left: #000000 2px solid;
+}
+
+main section.opportunities .slider .header .count .right::before {
+  content: '';
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000000;
+}
+
+main section.opportunities .slider .pictures {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 50px;
+  min-height: 450px;
+  position: relative;
+}
+
+main section.opportunities .slider .pictures div {
+  width: 385px;
+  height: 229px;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 100%;
+}
+
+main section.opportunities .slider .pictures .pt1 {
+  position: absolute;
+  top: 12%;
+  left: 0%;
+  z-index: 1;
+  -webkit-box-shadow: 10px 11px 0px #FFB800;
+          box-shadow: 10px 11px 0px #FFB800;
+}
+
+main section.opportunities .slider .pictures .pt2 {
+  position: absolute;
+  top: 0%;
+  left: 33%;
+  z-index: 2;
+}
+
+main section.opportunities .slider .pictures .pt3 {
+  position: absolute;
+  top: 20%;
+  right: 0%;
+  z-index: 1;
+  -webkit-box-shadow: 10px 11px 0px #FFB800;
+          box-shadow: 10px 11px 0px #FFB800;
+}
+
+main section.opportunities .slider .pictures .gray {
+  background-color: #c1bebea1;
+}
+
+main section.opportunities .slider .info {
+  display: none;
+}
+
+main section.about {
+  background-image: url("../img/bg_about.png");
+}
+
+main section .content {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+main section .empty {
+  width: 100%;
+  height: 1px;
+}
+
+main section .darken {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0000007d;
+}
+
+main section .darken.light {
+  background-color: #FFFFFF;
+}
+
+main section .page_number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section .page_number .number {
+  padding: 5px 14px;
+  border-top: #FFB800 1px solid;
+  border-bottom: #FFB800 1px solid;
+  border-right: #FFB800 1px solid;
+  position: relative;
+}
+
+main section .page_number .number span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'BebasNeueBook';
+  font-size: 13px;
+  line-height: 15.6px;
+}
+
+main section .page_number .number span.current {
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  border-bottom: #FFFFFF 1px solid;
+}
+
+main section .page_number .number span.all {
+  color: #838383;
+}
+
+main section .page_number .number:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 30%;
+  background-color: #FFB800;
+}
+
+main section .page_number .number:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 1px;
+  height: 30%;
+  background-color: #FFB800;
+}
+
+main section .page_number .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'BebasNeueBook';
+  font-size: 16px;
+  line-height: 19.2px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-left: 10px;
+}
+
+main section .page_number.light .number span.current {
+  color: #000000;
+  border-bottom: #000000 1px solid;
+}
+
+main section .page_number.light .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'BebasNeueBook';
+  font-size: 16px;
+  line-height: 19.2px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-left: 10px;
+}
+
+main section .slider {
+  width: 499px;
+}
+
+main section .slider .slider_body {
+  width: 100%;
+}
+
+main section .slider .slider_body .slider_window {
+  width: 100%;
+  min-height: 450px;
+  overflow: hidden;
+  position: relative;
+}
+
+main section .slider .slider_body .slider_window .slider_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */

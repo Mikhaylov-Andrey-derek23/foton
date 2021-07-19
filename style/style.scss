@@ -1,0 +1,891 @@
+$content_width : 1170px;
+$orange : #FFC736;
+$yellow : #FFB800;
+$white : #FFFFFF;
+$lightBlack : #0000007d;
+$black : #000000;
+$gray : #838383;
+$blackOpacity: #c1bebea1;
+
+@mixin adaptive($device) {
+    @if $device == tablet {
+        @media (max-width : 1024px) {
+            @content;
+        }
+    }
+    @else if $device == mobile{
+        @media (max-width: 520px){
+            @content
+        }
+    }
+}
+
+
+
+
+@font-face {
+    font-family: "BebasNeueBold"; 
+    src: url('../fonts/BebasNeueBold.otf') format("truetype"); 
+    font-family: "BebasNeueBook"; 
+    src: url('../fonts/BebasNeueBook.otf') format("truetype"); 
+    font-family: "GilroyMedium";
+    src: url('../fonts/GilroyMedium.ttf') format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    } 
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    backdrop-filter: blur(25px);
+    border-bottom: $white 1px solid;
+    z-index: 3;
+    nav{
+        max-width: $content_width;
+        margin: 0 auto;
+        top: 0;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptive(mobile){
+            flex-direction: column;
+            justify-content: start;
+        };
+        a{
+            display: block;
+            text-transform: uppercase ;
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 20px;
+            line-height: 23.44px;
+            @include adaptive(mobile){
+                margin-bottom: 20px;
+            }
+    
+            &.arrow{
+                position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    bottom: -30%;
+                    left: 80%;
+                    right: -14%;
+                    width: 59px;
+                    height: 9px;
+                    background-image: url('../img/nav_arrow.svg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+    
+    
+                }
+            }
+    
+            &.nav_menu{
+                padding: 20px 0;
+                width: 40px;
+                 .nav_menu_line{
+                    width: 100%;
+                    position: relative;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $orange;
+        
+                    }
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        bottom: -13px;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $orange;
+        
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+main{   
+    section {
+        width: 100%;
+        min-height:  100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-sizing: border-box;
+        
+        &.title{
+            background-image: url('../img/bg_svark.png');
+            display: flex;
+            .darken{
+                width: 100%;
+                background-color: $lightBlack;
+                .empty{
+                    width: 100%;
+                    height: 50vh;
+                }
+                h1{
+                    font-size: 66px;
+                    font-family: 'BebasNeueBold';
+                    color: $yellow;
+                    line-height: 79.2px; 
+                    margin: 0;
+                }
+                .text_and_link{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    @include adaptive(mobile){
+                        flex-direction: column
+                    };
+                    .text{
+                        max-width: 776px;
+                        color: $white;
+                        font-size: 24px;
+                        line-height: 28.13px;
+                        @include adaptive(mobile){
+                            margin-bottom: 20px;
+                        };
+                    }
+                    a{
+                        display: block;
+                        width: 25%;
+                        text-decoration: none;
+                        color: $white;
+                        font-size: 18px;
+                        text-transform: uppercase;
+                        text-align: center;
+                        padding: 20px 45px;
+                        border-top: $yellow 1px solid;
+                        border-bottom: $yellow 1px solid;
+                        border-right: $yellow 1px solid;
+                        position: relative;
+                        &:after{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 1px;
+                            height: 30%;
+                            background-color: $yellow;
+                            z-index: 1;
+                        }
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 1px;
+                            height: 30%;
+                            background-color: $yellow;
+                            z-index: 1;
+                        }
+                        span{
+                            &:before{
+                                content: '';
+                                position: absolute;
+                                top: 37%;
+                                left: 0;
+                                width: 23px;
+                                height: 15px;
+                                background-image: url('../img/arrow_button.svg');
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                z-index: 1;
+                                
+                            }
+                        }
+                    }
+                }
+                .title_footer{
+                    margin-top: 133px;
+                    display: flex;
+                    align-items: center;
+                    @include adaptive(mobile){
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                    };
+                    a{
+                        display: block;
+                        color: $white;
+                        text-decoration: none;
+                        font-size: 14px;
+                        line-height: 16.41px;
+                        margin-right: 119px;
+                        padding-top: 5px;
+                        border-top: $yellow 1px solid;
+                        
+                    }
+                    p{
+                        color: $white;
+                        font-size: 14px;
+                        line-height: 16.41px;
+                        padding-top: 5px;
+                        border-top: $yellow 1px solid;
+                    }
+                }
+            }
+            
+        }
+        &.product{
+            background-image: url('../img/bg_product.png');
+            &.light{
+                background-image: none;
+            }
+            .title{
+                display: flex;
+                margin-top: 140px;
+                margin-bottom: 12px;
+                div:nth-child(2){
+                    width: 80%;
+                }
+                h2{
+                    display: block;
+                    margin: 0%;
+                    font-size: 36px;
+                    font-family: 'BebasNeueBold';
+                    color: $white;
+                    line-height: 43.2px;
+                    text-align: center;
+                    &.light{
+                        color: $black
+                    }    
+                }
+            }
+            .product{
+                margin-top: 100px;
+                .product_body{
+                            .composite{
+                                display: flex;
+                                justify-content: space-between;
+                                div:nth-child(1){
+                                    h3{
+                                        font-family: 'BebasNeueBook';
+                                        font-size: 30px;
+                                        line-height: 36px;
+                                        padding-left: 36px;
+                                        color: $orange;
+                                        margin-bottom: 40px;
+                                        text-transform: uppercase;
+                                        position: relative;
+                                        &:before{
+                                            content: '';
+                                            position: absolute;
+                                            top: 18%;
+                                            left: 0;
+                                            padding: 10px;
+                                            border: $white 1px solid;
+                                            border-radius: 50%;
+                                        }
+
+                                    }
+                                    .detailed_information{
+                                        max-width: 320px;
+                                        height: 140px;
+                                        padding: 30px;
+                                        border-top: $white 1px solid;
+                                        border-left: $white 1px solid;
+                                        .title{
+                                            margin-top: 0px;
+                                            font-family: 'BebasNeueBook';
+                                            font-size: 20px;
+                                            line-height: 30px;
+                                            color: white
+
+                                        }
+                                        .description{
+                                            font-family: 'GilroyMedium';
+                                            font-size: 18px;
+                                            line-height: 27px;
+                                            color: $white;
+                                            white-space: nowrap;
+                                        }
+                                    }
+                                    a{
+                                        margin-top: 70px;
+                                        display: block;
+                                        padding: 19px 51px;
+                                        text-decoration: none;
+                                        text-transform: uppercase;
+                                        font-size: 18px;
+                                        line-height: 21px;
+                                        color: $white;
+                                        border-top: $yellow 1px solid;
+                                        border-bottom: $yellow 1px solid;
+                                        border-right: $yellow 1px solid;
+                                        position: relative;
+                                        &:after{
+                                            content: '';
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 1px;
+                                            height: 30%;
+                                            background-color: $yellow;
+                                            z-index: 1;
+                                        }
+                                        &:before{
+                                            content: '';
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                            width: 1px;
+                                            height: 30%;
+                                            background-color: $yellow;
+                                            z-index: 1;
+                                        }
+                                        span{
+                                            &:before{
+                                                content: '';
+                                                position: absolute;
+                                                top: 37%;
+                                                left: 0;
+                                                width: 23px;
+                                                height: 15px;
+                                                background-image: url('../img/arrow_button.svg');
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                z-index: 1;
+                                                
+                                            }
+                                        }
+                                    }
+                                }
+                                div:nth-child(2){
+                                    .composite{
+                                        position: relative;
+                                    }
+                                    .product_picture{
+                                        width: 499px;
+                                        height: 499px;
+                                        background-repeat: no-repeat;
+                                        background-size: 100%;
+                                        background-position: 100% 0%;
+
+                                    }
+                                    .info_detailed{
+                                        position: absolute;
+                                        background-color: $white;
+                                        text-align: center;
+                                        font-size: 10px;
+                                        padding: 29px;
+                                        border-radius: 50%;
+                                        cursor: pointer;
+                                        top: 0;
+                                        left: 0;
+                                        &:before{
+                                            content: 'Наведите';
+                                            position: absolute;
+                                            text-transform: uppercase;
+                                            font-size: 9px;
+                                            top: 28%;
+                                            left: 7%;
+                                        }
+                                        &:after{
+                                            content: 'курсор';
+                                            position: absolute;
+                                            text-transform: uppercase;
+                                            font-size: 9px;
+                                            top: 48%;
+                                            left: 19%;
+                                        }
+                                    }
+                                }
+                            }
+                    .container_btn{
+                        display: flex;
+                        margin-top: 108px;
+                        justify-content: space-between;
+                        font-family: 'BebasNeueBook';
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: $white;
+                        text-transform: uppercase;
+                        .left_btn{
+                            padding: 21px 0;
+                            cursor: pointer;
+                            position: relative;
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                top: 0%;
+                                left: 0%;
+                                padding: 3px;
+                                transform: rotate(-50deg);
+                                border-top: $yellow 1px solid;
+                                border-left: $yellow 1px solid; 
+                            }
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                top: 3%;
+                                left: 0;
+                                width: 100%;
+                                height: 1px;
+                                background-color: $yellow;
+                                
+                            }
+                        }
+                        .right_btn{
+                            padding: 21px 0;
+                            cursor: pointer;
+                            position: relative;
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                top: 0%;
+                                right: 0%;
+                                padding: 3px;
+                                transform: rotate(130deg);
+                                border-top: $yellow 1px solid;
+                                border-left: $yellow 1px solid; 
+                            }
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                top: 3%;
+                                left: 0;
+                                width: 100%;
+                                height: 1px;
+                                background-color: $yellow;
+                                
+                            }
+                        }                        
+                    }
+                }
+            }
+            .product{
+                &.light{
+                    .product_body{
+                                .composite{
+                                    div:nth-child(1){
+                                        order: 2;
+                                        h3{
+                                            &:before{
+                                                content: '';
+                                                border: $black 1px solid;
+                                            }
+                                        }
+                                        .detailed_information{
+                                            border-top: $black 1px solid;
+                                            border-left: $black 1px solid;
+                                            .title{
+                                                color: $black
+                                            }
+                                            .description{
+                                                color: $black;
+                                            }
+                                        }
+                                        a{
+                                            color: $black;
+                                        }
+                                    }
+                                }
+                        .container_btn{
+                            color: $black;                      
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+        &.advantages{
+            background-image: url('../img/bg_advantages.png');
+            color: wheat;
+            .page_number{
+                margin-top: 169px;
+            }
+            .title{
+                width: 100%;
+                margin-top: 86px;
+                display: flex;
+                justify-content: space-between;
+                div:nth-child(1){
+                    width: 60%;
+                    h2{
+                        margin: 0;
+                        font-family: 'BebasNeueBook';
+                        font-size: 36px;
+                        line-height: 43.2px;
+                        color: $yellow;
+                        text-align: center; 
+                        font-weight: 400;                       
+                    }
+                    h3{
+                        margin-top: 20px;
+                        font-family: 'GilroyMedium';
+                        font-size: 18px;
+                        line-height: 21.6px;
+                        font-weight: 400;   
+                        color: $white;
+
+                    }
+                }
+                div:nth-child(2){
+                    width: 35%;
+                }
+
+            }
+            .light_block{
+                padding: 22px 33px;
+                border-bottom: $white 1px solid;
+                border-left: $white 1px solid;
+
+                .title_block{
+                    font-family: 'BebasNeueBook';
+                    font-size: 20px;
+                    line-height: 26.8px;
+                    color: $white;
+                }
+                .block{
+                    font-family: 'GilroyMedium';
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;   
+                    color: $white;
+                }
+            }
+            .orange_block{
+                padding: 22px 33px;
+                border-top: $yellow 1px solid;
+                border-right: $yellow 1px solid;
+                &.differently{
+                    border-right: $yellow 0 solid;
+                    border-left: $yellow 1px solid;
+                }
+                .title_block{
+                    font-family: 'BebasNeueBook';
+                    font-size: 20px;
+                    line-height: 26.8px;
+                    color: $white;
+                }
+                .block{
+                    font-family: 'GilroyMedium';
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;   
+                    color: $white;
+                }
+            }
+            .blocks_advantages{
+                margin-top: 50px;
+                display: flex;
+                justify-content: space-between;
+                div{
+                    width: 25%;
+                    max-height: 150px;
+                }
+                div:nth-child(2){
+                    margin-top: 60px;
+                }
+                div:nth-child(3){
+                    margin-top: 40px;
+                }
+            }
+        }
+        &.opportunities{
+            .title{
+                margin-top: 169px;
+                display: flex;
+                justify-content: space-between;
+                .page_number{
+                    margin-top: 30px;
+
+                }
+                div:nth-child(2){
+                    width: 80%;
+                    h2{
+                        font-family: 'BebasNeueBook';
+                        font-size: 36px;
+                        line-height: 36px;
+                        color: $black;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                    p{
+                        font-family: 'GilroyMedium';
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 400;   
+                        color: $black;
+                        text-align: center;
+                    }
+                }
+            }
+            .slider{
+                margin-top: 62px;
+                width: 100%;
+                .header{
+                    display: flex;
+                    justify-content: space-between;
+                    p{
+                        margin: 0;
+                    }
+                    .text{
+                        width: 42%;
+                        padding-left: 130px;
+                        .title{
+                            font-family: 'BebasNeueBook';
+                            font-size: 22px;
+                            line-height: 26.5px;
+                            color: $black;
+                            font-weight: 400;
+                            text-transform: uppercase;
+                        }
+                        .description{
+                            margin-top: 10px;
+                            font-family: 'GilroyMedium';
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-weight: 400;   
+                            color: $black;
+                        }
+                        position: relative;
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            padding: 10px;
+                            border-radius: 50%;
+                            border: $black 1px solid;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                    .count{
+                        display: flex;
+                        font-family: 'BebasNeueBook';
+                        font-size: 60px;
+                        line-height: 72px;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        max-height: 70px;
+                        .left{
+                            padding-left: 10px;
+                            color: $yellow;
+                            cursor: pointer;
+                            position: relative;
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                bottom: 0%;
+                                left: 0%;
+                                padding: 3px;
+                                transform: rotate(-50deg);
+                                border-top: $black 2px solid;
+                                border-left: $black 2px solid; 
+                            }
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                bottom: 4%;
+                                left: 0;
+                                width: 100%;
+                                height: 2px;
+                                background-color: $black;
+                            }
+                        }
+                        .separator{
+                            color: $gray;
+                            font-weight: bold;
+                        }
+                        .right{
+                            padding-left: 10px;
+                            color: $gray;
+                            cursor: pointer;
+                            position: relative;
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                bottom: 0%;
+                                right: 0%;
+                                padding: 3px;
+                                transform: rotate(130deg);
+                                border-top: $black 2px solid;
+                                border-left: $black 2px solid; 
+                            }
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                bottom: 4%;
+                                left: 0;
+                                width: 100%;
+                                height: 2px;
+                                background-color: $black;
+                            }
+                        }
+                    }
+                    
+                }
+                .pictures{
+                    width: 95%;
+                    margin: 0 auto;
+                    margin-top: 50px;
+                    min-height: 450px;
+                    position: relative;
+                    div{
+                        width: 385px;
+                        height: 229px;
+                        background-repeat: no-repeat;
+                        background-position: 100% 0;
+                        background-size: 100%;
+                    }
+                    .pt1{
+                        position: absolute;
+                        top: 12%;
+                        left: 0%;
+                        z-index: 1;
+                        box-shadow: 10px 11px 0px $yellow;
+                    }
+                    .pt2{
+                        position: absolute;
+                        top: 0%;
+                        left: 33%;
+                        z-index: 2;
+                    }
+                    .pt3{
+                        position: absolute;
+                        top: 20%;
+                        right: 0%; 
+                        z-index: 1;
+                        box-shadow: 10px 11px 0px $yellow;
+                    }
+                    .gray{
+                        background-color: $blackOpacity;
+                    }
+                }
+                .info{
+                    display: none;
+                }
+            }
+        }
+        &.about{
+            background-image: url('../img/bg_about.png');
+        }
+        .content{
+            max-width: $content_width;
+            margin: 0 auto;
+        }
+        .empty{
+            width: 100%;
+            height: 1px;
+        }
+        .darken{
+            width: 100%;
+            min-height: 100vh;
+            background-color: $lightBlack;
+            &.light{
+                background-color: $white;
+            }
+        }
+        .page_number{
+            display: flex;
+            align-items: center;
+            .number{
+                padding: 5px 14px;
+                border-top: $yellow 1px solid;
+                border-bottom: $yellow 1px solid;
+                border-right: $yellow 1px solid;
+                position: relative;
+                span{
+                    display: flex;
+                    font-family: 'BebasNeueBook';
+                    font-size: 13px;
+                    line-height: 15.6px;
+                    &.current{
+                        color: $white;
+                        margin-bottom: 6px;
+                        border-bottom: $white 1px solid;
+                    }
+                    &.all{
+                        color : $gray;
+                    }
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 1px;
+                    height: 30%;
+                    background-color: $yellow;
+                }
+                &:before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 1px;
+                    height: 30%;
+                    background-color: $yellow;
+                }
+            }
+            .description{
+                display: flex;
+                font-family: 'BebasNeueBook';
+                font-size: 16px;
+                line-height: 19.2px;
+                text-transform: uppercase;
+                color: $white;
+                margin-left: 10px;
+            }
+        }
+        .page_number{
+            &.light{
+                .number{
+                    span{
+                        &.current{
+                            color: $black;
+                            border-bottom: $black 1px solid;
+                        }
+                    }
+                }
+                .description{
+                    display: flex;
+                    font-family: 'BebasNeueBook';
+                    font-size: 16px;
+                    line-height: 19.2px;
+                    text-transform: uppercase;
+                    color: $black;
+                    margin-left: 10px;
+                }
+            }
+            
+        }
+        .slider{
+            width: 499px;
+            .slider_body{
+                width: 100%;
+                .slider_window{
+                    width: 100%;
+                    min-height: 450px;
+                    overflow: hidden;
+                    position: relative;
+                    .slider_content{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        
+                    }
+                }
+            }
+
+        }
+    }
+
+}
